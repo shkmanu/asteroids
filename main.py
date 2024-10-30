@@ -7,7 +7,7 @@ from constants import *
 def main():
     pygame.init()
     fps_clock = pygame.time.Clock()
-    dt = 0
+    dt = fps_clock.tick(60) / 1000
 
     print("Starting asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
