@@ -23,6 +23,7 @@ def main():
                 return
         screen.fill(000)
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip()
         fps_clock.tick(60)
 
