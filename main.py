@@ -42,7 +42,11 @@ def main():
             if element.check_collision(player) == True:
                 print("Game over!")
                 return
-
+        for rock in asteroids:
+            for bullet in shots:
+                if bullet.check_collision(rock) == True:
+                    rock.split()
+                    bullet.kill()
         pygame.display.flip()
         fps_clock.tick(60)
 
