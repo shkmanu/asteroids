@@ -36,6 +36,11 @@ def main():
             element.draw(screen)
         for element in updateables:
             element.update(dt)
+        for element in asteroids:
+            if element.check_collision(player) == True:
+                print("Game over!")
+                return
+
         pygame.display.flip()
         fps_clock.tick(60)
 
